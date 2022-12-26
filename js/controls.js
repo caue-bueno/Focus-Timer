@@ -43,18 +43,18 @@ export default function Controls({
         card.classList.add('pressed')
     }
 
-    function add() {
-        let minutes = Number(minutesDisplay.textContent)
-        minutes = minutes + 5
-        minutesDisplay.textContent = String(minutes).padStart(2, "0")
-    }
+    // function add() {
+    //     let minutes = Number(minutesDisplay.textContent)
+    //     minutes = minutes + 5
+    //     minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    // }
 
 
-    function deduct() {
-        let minutes = Number(minutesDisplay.textContent)
-        minutes = minutes - 5
-        minutesDisplay.textContent = String(minutes).padStart(2, "0")
-    }
+    // function deduct() {
+    //     let minutes = Number(minutesDisplay.textContent)
+    //     minutes = minutes - 5
+    //     minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    // }
 
     return {
         togglePlayPause,

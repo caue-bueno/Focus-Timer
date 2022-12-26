@@ -20,6 +20,17 @@ export default function Timer ({minutesDisplay, secondsDisplay, resetControls}){
     function pause () {
         clearTimeout(timerTimeout)
     }
+
+    function add() {
+        minutes = minutes + 5
+        minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    }
+
+
+    function deduct() {
+        minutes = minutes - 5
+        minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    }
     
     function countdown () {
        timerTimeout = setTimeout(function() {
@@ -50,6 +61,8 @@ export default function Timer ({minutesDisplay, secondsDisplay, resetControls}){
         reset,
         countdown,
         pause,
+        add,
+        deduct
     }
 
 
