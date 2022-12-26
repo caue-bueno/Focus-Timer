@@ -29,13 +29,6 @@ export default function Controls({
     }
 
     function pressButton (card) {
-
-        // let alreadyPressed = card.classList.contains('pressed')
-
-        // if (alreadyPressed){
-        //     card.classList.remove('pressed')
-        //     return
-        // }
         forest.classList.remove('pressed')
         rain.classList.remove('pressed')
         coffee.classList.remove('pressed')
