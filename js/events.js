@@ -1,7 +1,14 @@
-import { play,pause,stop,add,deduct,forest,rain,coffee,fireplace } from "./elements.js"
+import { play, pause, stop, add, deduct, forest, rain, coffee, fireplace, sun, moon } from "./elements.js"
+
 
 export default function Events({controls, timer, sound}){
 
+    moon.addEventListener('click', () => {
+        controls.lightMode()
+    })
+    sun.addEventListener('click', () => {
+        controls.darkMode()
+    })
     
     play.addEventListener('click', () => {
         controls.togglePlayPause()
@@ -20,7 +27,7 @@ export default function Events({controls, timer, sound}){
     })
 
     add.addEventListener('click', () => {
-        timer.add()
+        timer.add()        
     })
 
     deduct.addEventListener('click', () => {
@@ -50,7 +57,5 @@ export default function Events({controls, timer, sound}){
         sound.pressFireplaceButton()
         controls.pressButton(fireplace)
     })
-
-
 
 }

@@ -1,20 +1,19 @@
 import Sounds from "./sound.js"
 
+
 let sounds = Sounds()
-
-
-
 
 export default function Controls({
     play,
     pause,
-    add,
-    deduct,
     forest,
     rain,
     coffee,
     fireplace,
-    minutesDisplay
+    minutesDisplay,
+    html,
+    sun,
+    moon,
 }) 
 
 {
@@ -36,15 +35,26 @@ export default function Controls({
         card.classList.add('pressed')
     }
 
-    // function add() {
-    //     let minutes = Number(minutesDisplay.textContent)
-    //     minutes = minutes + 5
+    function lightMode () {
+        html.classList.remove('darkmode')
+        sun.classList.remove('hide')
+        moon.classList.add('hide')
+    }
+
+    function darkMode () {
+        html.classList.add('darkmode')
+        sun.classList.add('hide')
+        moon.classList.remove('hide')
+    }
+
+    // function add(minutes) {
+    //     return minutes.min + 5
     //     minutesDisplay.textContent = String(minutes).padStart(2, "0")
     // }
 
 
     // function deduct() {
-    //     let minutes = Number(minutesDisplay.textContent)
+        
     //     minutes = minutes - 5
     //     minutesDisplay.textContent = String(minutes).padStart(2, "0")
     // }
@@ -53,8 +63,8 @@ export default function Controls({
         togglePlayPause,
         reset,
         pressButton,
-        add,
-        deduct,
+        lightMode,
+        darkMode,
     }
 }
 

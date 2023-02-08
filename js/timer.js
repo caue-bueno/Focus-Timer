@@ -21,6 +21,10 @@ export default function Timer ({minutesDisplay, secondsDisplay, resetControls}){
         clearTimeout(timerTimeout)
     }
 
+    function updateMinutes(newMinutes) {
+        minutes = newMinutes
+    }
+
     function add() {
         minutes = minutes + 5
         minutesDisplay.textContent = String(minutes).padStart(2, "0")

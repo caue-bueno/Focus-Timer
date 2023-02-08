@@ -6,45 +6,79 @@
 
 :root {
     font-size: 62.5%;
-    --fc-color: #323238;
+
+    --primary-color:240; /*  #121214 */
+    --secondary-color: #FFF;
+    --terceary-color: 194;
+
+    --fc-color: hsl(240, 6%, 21%);
+
+    --bg-color: #FFF;
+    --bg-btn: #FFF;
+    --fill-btn: #323238;
+    --svg-fill: #121214;
+    --svg-bg: #E1E1E6;
+    --svg-pressed-fill: hsl(0, 0%, 100%);
+    --svg-pressed-bg: #02789C;
 }
 
 body {
     height: 100vh;
     display: grid;
-    place-items: center;
+    grid-template-rows: 10rem 1fr;
     font-family: 'Roboto', sans-serif;
+    position: relative;
+    background-color: var(--bg-color);
 }
+
+header {
+    position: relative;
+}
+
+header svg {
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+    cursor: pointer;
+}
+
+.darkmode:root {
+    
+    /* --primary-color: white;
+    --secondary-color: 240;
+    --terceary-color: 195; */
+
+    --fc-color: #FFF;
+
+    --bg-color: #121214;
+    --bg-btn: #121214;
+    --fill-btn:#FFF;
+    --svg-bg: #29292E;
+    --svg-fill: #C4C4CC;
+    --svg-pressed-bg: #0A3442;
+}
+
 
 main {
     display: flex;
     flex-direction: column;
-    height: 55rem;
+    height: 75rem;
     gap: 1rem;
-    
 }
 
 .hide {
     display: none;
 }
 
-.pressed path + path{
-    fill: white;
-}
-
-.pressed path {
-    fill: #02799D;
-}
-
-
-
 .wrapper {
     width: 32.1rem;
-    height: 21.3rem;
+    height: 23rem;
+
+    margin: 10rem auto 0;
     
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 4rem;   
 }
 
 .timer {
@@ -56,7 +90,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .controls {
@@ -66,36 +99,46 @@ main {
 
     display: flex;
     justify-content: space-between;
-    
 }
 
 .controls button {
     border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-btn);
     transition: .3s;
-    
+    border-radius: 50%;
+    background-color: transparent;
 }
 
 .controls button svg:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
 }
 
+button svg path {
+    fill: var(--fill-btn);
+}
+
+button svg rect {
+    fill: var(--fill-btn);
+}
+
+button svg rect + rect {
+    fill: var(--fill-btn);
+}
+
+
 .cards {
-    
-    margin: 50px auto 0;
+    margin: 2rem auto;
     width: 31rem;
     height: 31rem;
 
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .cards svg {
-    border-radius: 26px;
+    border-radius: 2.6rem;
     transition: .3s;
     cursor: pointer;
 }
@@ -105,22 +148,47 @@ main {
     scale: 1.05;
 }
 
+.cards svg path {
+    fill: var(--svg-bg);
+}
+
+.cards path + path {
+    fill:var(--svg-fill);
+}
+
+.cards .pressed path {
+    fill: var(--svg-pressed-bg);
+}
+
+.cards .pressed path + path {
+    fill: var(--svg-pressed-fill)
+}
+
+
+
+
 
 @media (min-width : 900px) {
 
     main {
         width: 82.1rem;
-        height: 33.6rem;
+        height: 63.6rem;
 
         flex-direction:row;
         justify-content: space-between;
         align-items: center;
         
+        margin: 0 auto;
     }
+
+    .wrapper {
+        margin: 0;
+        margin-left: 0.5rem;
+    }    
 
     .cards {
         margin: 0;
-        
+        margin-right: 0.5rem; 
     }
     
 }

@@ -9,6 +9,12 @@ const coffee = document.querySelector('.coffee')
 const fireplace = document.querySelector('.fireplace')
 const minutesDisplay = document.querySelector('.min')
 const secondsDisplay = document.querySelector('.sec')
+const sun = document.querySelector('.sun')
+const moon = document.querySelector('.moon')
+const html= document.querySelector('html')
+
+// let minutes = Number(minutesDisplay.textContent)
+
 
 export {
     play,
@@ -21,5 +27,9 @@ export {
     coffee,
     fireplace,
     minutesDisplay,
-    secondsDisplay
+    secondsDisplay,
+    sun,
+    moon,
+    html,
+    
 }
