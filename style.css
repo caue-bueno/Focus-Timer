@@ -20,6 +20,7 @@
     --svg-bg: #E1E1E6;
     --svg-pressed-fill: hsl(0, 0%, 100%);
     --svg-pressed-bg: #02789C;
+    --slider-bg: #000;
 }
 
 body {
@@ -56,6 +57,7 @@ header svg {
     --svg-bg: #29292E;
     --svg-fill: #C4C4CC;
     --svg-pressed-bg: #0A3442;
+    --slider-bg: #FFF;
 }
 
 
@@ -137,13 +139,13 @@ button svg rect + rect {
     justify-content: center;    
 }
 
-.cards svg {
+.card {
     border-radius: 2.6rem;
     transition: .3s;
     cursor: pointer;
 }
 
-.cards svg:hover {
+.card:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
     scale: 1.05;
 }
@@ -161,10 +163,45 @@ button svg rect + rect {
 }
 
 .cards .pressed path + path {
-    fill: var(--svg-pressed-fill)
+    fill: var(--svg-pressed-fill);
 }
 
 
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+}
+
+.slider {
+    position: absolute;
+    z-index: 1;
+    width: 70%;
+    height: .4rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    appearance: none;
+    background-color: var(--slider-bg);
+    border-radius: 4rem;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--slider-bg);
+}
+
+.slider::-moz-range-thumb {
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--slider-bg);
+    border: none;
+}
 
 
 

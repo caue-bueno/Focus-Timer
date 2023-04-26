@@ -14,7 +14,8 @@ export default function Controls({
     html,
     sun,
     moon,
-    minutes
+    minutes,
+    volume
 }) 
 
 {
@@ -34,6 +35,7 @@ export default function Controls({
         coffee.classList.remove('pressed')
         fireplace.classList.remove('pressed')
         card.classList.add('pressed')
+        volume.classList.add('pressed')
     }
 
     function lightMode () {

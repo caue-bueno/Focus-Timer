@@ -7,6 +7,7 @@ const forest = document.querySelector('.forest')
 const rain = document.querySelector('.rain')
 const coffee = document.querySelector('.coffee')
 const fireplace = document.querySelector('.fireplace')
+const volume = document.querySelector('.slider')
 const minutesDisplay = document.querySelector('.min')
 const secondsDisplay = document.querySelector('.sec')
 const sun = document.querySelector('.sun')
@@ -31,5 +32,6 @@ export {
     sun,
     moon,
     html,
+    volume,
     
 }
