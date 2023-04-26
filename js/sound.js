@@ -26,7 +26,6 @@ export default function Sounds() {
         rainButton.pause()
         coffeeButton.pause()
         fireplaceButton.pause()
-        console.log('pause')
     }
 
     return {

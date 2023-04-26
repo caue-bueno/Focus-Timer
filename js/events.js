@@ -27,11 +27,11 @@ export default function Events({controls, timer, sound}){
     })
 
     add.addEventListener('click', () => {
-        timer.add()        
+        controls.add()        
     })
 
     deduct.addEventListener('click', () => {
-        timer.deduct()
+        controls.deduct()
     })
 
     forest.addEventListener('click', () => {

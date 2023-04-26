@@ -8,6 +8,8 @@ import Sound from "./sound.js"
 
 let minutes = Number(minutesDisplay.textContent)
 
+
+
 const controls = Controls({
     play,
     pause,
@@ -21,12 +23,14 @@ const controls = Controls({
     html,
     sun,
     moon,
+    minutes
 })
 
 const timer = Timer({
     minutesDisplay,
     secondsDisplay,
     resetControls: controls.reset,
+    minutes
 })
 
 

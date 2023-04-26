@@ -1,8 +1,8 @@
 
 
-export default function Timer ({minutesDisplay, secondsDisplay, resetControls}){
+export default function Timer ({minutesDisplay, secondsDisplay, resetControls, minutes}){
     
-    let minutes = Number(minutesDisplay.textContent)
+    // let minutes = Number(minutesDisplay.textContent)
     let timerTimeout
 
     function updateDisplay (newMinutes, seconds) {
@@ -21,23 +21,24 @@ export default function Timer ({minutesDisplay, secondsDisplay, resetControls}){
         clearTimeout(timerTimeout)
     }
 
-    function updateMinutes(newMinutes) {
-        minutes = newMinutes
-    }
+    // function updateMinutes(newMinutes) {
+    //     minutes = newMinutes
+    // }
 
-    function add() {
-        minutes = minutes + 5
-        minutesDisplay.textContent = String(minutes).padStart(2, "0")
-    }
+    // function add() {
+    //     minutes = minutes + 5
+    //     minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    // }
 
 
-    function deduct() {
-        minutes = minutes - 5
-        minutesDisplay.textContent = String(minutes).padStart(2, "0")
-    }
+    // function deduct() {
+    //     minutes = minutes - 5
+    //     minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    // }
     
     function countdown () {
        timerTimeout = setTimeout(function() {
+        
 
             let seconds = Number(secondsDisplay.textContent)
             let minutes = Number(minutesDisplay.textContent)
@@ -53,7 +54,6 @@ export default function Timer ({minutesDisplay, secondsDisplay, resetControls}){
                 resetControls()
                 return
             }
-            
             updateDisplay(minutes, seconds - 1)
             
             countdown()
@@ -65,8 +65,6 @@ export default function Timer ({minutesDisplay, secondsDisplay, resetControls}){
         reset,
         countdown,
         pause,
-        add,
-        deduct
     }
 
 

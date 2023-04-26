@@ -14,6 +14,7 @@ export default function Controls({
     html,
     sun,
     moon,
+    minutes
 }) 
 
 {
@@ -47,17 +48,17 @@ export default function Controls({
         moon.classList.remove('hide')
     }
 
-    // function add(minutes) {
-    //     return minutes.min + 5
-    //     minutesDisplay.textContent = String(minutes).padStart(2, "0")
-    // }
+    function add() {
+        minutes = Number(minutesDisplay.textContent) + 5
+        minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    }
 
 
-    // function deduct() {
+    function deduct() {
         
-    //     minutes = minutes - 5
-    //     minutesDisplay.textContent = String(minutes).padStart(2, "0")
-    // }
+        minutes = Number(minutesDisplay.textContent) - 5
+        minutesDisplay.textContent = String(minutes).padStart(2, "0")
+    }
 
     return {
         togglePlayPause,
@@ -65,6 +66,8 @@ export default function Controls({
         pressButton,
         lightMode,
         darkMode,
+        add,
+        deduct
     }
 }
 
