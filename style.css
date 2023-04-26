@@ -21,6 +21,7 @@
     --svg-pressed-fill: hsl(0, 0%, 100%);
     --svg-pressed-bg: #02789C;
     --slider-bg: #000;
+    --pressed-slider-bg: #FFF;
 }
 
 body {
@@ -166,6 +167,13 @@ button svg rect + rect {
     fill: var(--svg-pressed-fill);
 }
 
+.pressed .slider {
+    background-color: var(--pressed-slider-bg);
+}
+
+.pressed .slider::-moz-range-thumb {
+    background-color: var(--pressed-slider-bg);
+}
 
 .card {
     position: relative;

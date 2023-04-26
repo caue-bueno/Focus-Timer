@@ -7,15 +7,17 @@ const forest = document.querySelector('.forest')
 const rain = document.querySelector('.rain')
 const coffee = document.querySelector('.coffee')
 const fireplace = document.querySelector('.fireplace')
-const volume = document.querySelector('.slider')
 const minutesDisplay = document.querySelector('.min')
 const secondsDisplay = document.querySelector('.sec')
 const sun = document.querySelector('.sun')
 const moon = document.querySelector('.moon')
-const html= document.querySelector('html')
+const html = document.querySelector('html')
+const forestVolume = document.querySelector('.forestVolume')
+const rainVolume = document.querySelector('.rainVolume')
+const coffeeVolume = document.querySelector('.coffeeVolume')
+const fireplaceVolume = document.querySelector('.fireplaceVolume')
 
 // let minutes = Number(minutesDisplay.textContent)
-
 
 export {
     play,
@@ -32,6 +34,8 @@ export {
     sun,
     moon,
     html,
-    volume,
-    
+    forestVolume,
+    rainVolume,
+    coffeeVolume,
+    fireplaceVolume
 }

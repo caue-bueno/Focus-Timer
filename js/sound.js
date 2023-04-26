@@ -1,31 +1,46 @@
 export default function Sounds() {
-    const forestButton = new Audio ("./assets/Floresta.wav")
-    const rainButton = new Audio ("./assets/Chuva.wav")
-    const coffeeButton = new Audio ("./assets/Cafeteria.wav")
-    const fireplaceButton = new Audio ("./assets/Lareira.wav")
+    const forestSound = new Audio ("./assets/Floresta.wav")
+    const rainSound = new Audio ("./assets/Chuva.wav")
+    const coffeeSound = new Audio ("./assets/Cafeteria.wav")
+    const fireplaceSound = new Audio ("./assets/Lareira.wav")
 
     function pressForestButton () {
-        forestButton.play()
-        console.log('play')
+        forestSound.play()
     }
 
     function pressRainButton () {
-        rainButton.play()
+        rainSound.play()
     }
 
     function pressCoffeeButton () {
-        coffeeButton.play()
+        coffeeSound.play()
     }
 
     function pressFireplaceButton () {
-        fireplaceButton.play()
+        fireplaceSound.play()
+    }
+
+    function forestSetVolume(value) {
+        forestSound.volume = value / 100;
+    }
+
+    function rainSetVolume(value) {
+        rainSound.volume = value / 100;
+    }
+
+    function coffeeSetVolume(value) {
+        coffeeSound.volume = value / 100;
+    }
+
+    function fireplaceSetVolume(value) {
+        fireplaceSound.volume = value / 100;
     }
 
     function stop () {
-        forestButton.pause()
-        rainButton.pause()
-        coffeeButton.pause()
-        fireplaceButton.pause()
+        forestSound.pause()
+        rainSound.pause()
+        coffeeSound.pause()
+        fireplaceSound.pause()
     }
 
     return {
@@ -34,6 +49,10 @@ export default function Sounds() {
         pressCoffeeButton,
         pressFireplaceButton,
         stop,
+        forestSetVolume,
+        rainSetVolume,
+        coffeeSetVolume,
+        fireplaceSetVolume
     }
 }
 

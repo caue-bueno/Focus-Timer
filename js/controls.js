@@ -15,7 +15,6 @@ export default function Controls({
     sun,
     moon,
     minutes,
-    volume
 }) 
 
 {
@@ -27,6 +26,10 @@ export default function Controls({
     function reset() {
         play.classList.remove('hide')
         pause.classList.add('hide')
+        forest.classList.remove('pressed')
+        rain.classList.remove('pressed')
+        coffee.classList.remove('pressed')
+        fireplace.classList.remove('pressed')
     }
 
     function pressButton (card) {
@@ -35,7 +38,6 @@ export default function Controls({
         coffee.classList.remove('pressed')
         fireplace.classList.remove('pressed')
         card.classList.add('pressed')
-        volume.classList.add('pressed')
     }
 
     function lightMode () {
